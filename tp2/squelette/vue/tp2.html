@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/tp2.css">
-    <title>Mise en boîte de petits textes</title>
-</head>
-
-<body>
-    <div id="div_tp2">
-        <header>
-            Mise en boîte de petits textes
-        </header>
-        <div>
-            <label for="edt_saisie">Taper votre texte puis Entrer</label>
-            <input type="text" id="edt_saisie" placeholder="entrer le texte ici" size="40">
-        </div>
-        <div class="gestion_liste">
-            <select id="select_texte" class="liste" size="10">
-            </select>
-
-            <div>
-                <input id="btn_supprimer" type="button" value="Supprimer">
-                <input id="btn_vider" type="button" value="Vider">
-            </div>
-        </div>
-        <div>
-            <input id="chk_tri" name="chk_tri" type="checkbox" value="tri">
-            <label for="chk_tri">liste triée</label>
-        </div>
-    </div>
-</body>
-<script type="module" src="../src/controleur/tp2.js"></script>
-
-</html>
+    <html>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <title> Mise en boîte de petits textes </title>
+            <link type="text/css" rel="stylesheet" href= "./css/tp2.css">
+        </head>
+        <body>
+            <div id='div_tp2'>
+                <header>
+                    Mise en boîte de petits textes
+                </header>
+                <div>
+                    <label for="edt_saisie">Taper votre texte puis Entrer</label>
+                    <input type='text' id="edt_saisie" placeholder="entrer le texte ici" size='40'>
+                </div>
+                    <div class="gestion_liste">
+                        <div>
+                            <select id="select_texte" class="liste" size="10"></select>
+                        </div>
+                        <div>
+                            <input id="btn_supprimer" type="button" value="Supprimer">
+                            <input id="btn_vider" type="button" value="Vider">
+                        </div>
+                    </div>
+                <div>
+                    <input id="chk_tri" name="chk_tri" type="checkbox"value="tri">
+                    <label for="chk_tri">liste triée</label>
+                </div>
+            </div>    
+        </body>
+        <script type="module" src="../controleur/tp2.js">
+        </script>
+    </html>

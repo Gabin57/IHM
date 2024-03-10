@@ -1,14 +1,11 @@
 class VueTp2 {
     init(form) {
         this._form = form;
-        this.form.edtSaisie.onkeydown
-            = function (event) { vueTp2.ajouterSaisie(event); };
-        this.form.chkTri.onchange
-            = function () { vueTp2.trierListe(); };
-        this.form.btnVider.onclick
-            = function () { vueTp2.viderListe(); };
-        this.form.btnSupprimer.onclick
-            = function () { vueTp2.supprimerLigne(); };
+        // définition des événements
+        this.form.edtSaisie.onkeydown = function (event) { vueTp2.ajouterSaisie(event); };
+        this.form.chkTri.onchange = function () { vueTp2.trierListe(); };
+        this.form.btnVider.onclick = function () { vueTp2.viderListe(); };
+        this.form.btnSupprimer.onclick = function () { vueTp2.supprimerLigne(); };
     }
     get form() { return this._form; }
     viderListe() {
