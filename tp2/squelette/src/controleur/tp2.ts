@@ -1,4 +1,4 @@
-import {vueTp2} from "../controleur/class_tp2.js"
+import {vueTp2} from "../controleur/class_tp2"
 
 vueTp2.init (
 {	edtSaisie : document.querySelector("[id=edt_saisie]"),
