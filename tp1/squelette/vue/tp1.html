@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/tp1.css">
-        <title>Hors Taxes ou Toutes Taxes Comprises</title>
-    </head>
-    <body>
-        <div id="div_tp1">
-            <header>
-                Hors Taxes ou Toutes taxes Comprises
-            </header>
-            <div class="div_tva">
-                Taux de TVA <br>
-                <div class="div_tvadetail">
-                    <div><input type='radio' id='radio_taux1' name='taux_tva' value='5'>5%</div>
-                    <div><input type='radio' id='radio_taux1' name='taux_tva' value='10'>10%</div>
-                    <div><input type='radio' id='radio_taux1' name='taux_tva' value='20'>20%
+    <html>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <title>Hors Taxes ou Toutes Taxes Comprises</title>
+            <link type="text/css" rel="stylesheet" href="./css/tp1.css">
+        </head>
+        <body>
+            <div id='div_tp1'>
+                <header>
+                    Hors Taxes ou Toutes Taxes Comprises
+                </header>
+                <div class='div_tva'>
+                    Taux de TVA<br>
+                    <div class='div_tvadetail'>
+                        <div><input type='radio' id='radio_taux1' name='taux_tva' value='5' >5%</div>
+                        <div><input type='radio' id='radio_taux2' name='taux_tva' value='10'>10%</div>
+                        <div><input type='radio' id='radio_taux3' name='taux_tva' value='20'>20%</div>
+                    </div>
+                </div>
+                <div class='div_saisie'>
+                    <label for='edt_ht' >HT</label>
+                    <input type='text' name='ht' id='edt_ht' placeholder="entrer le HT" size='10' maxlength='10'>
+                    <label for='edt_ttc' >TTC</label>
+                    <input type='text' name='edt_ttc' id='edt_ttc' placeholder='entrer le TTC' size='10' maxlength='10'>
+                </div>
+                <div class='div_bouton'>
+                    <input id="btn_calculer" type="button" >
                 </div>
             </div>
-            <div class="div_saisie">
-                <label for="edt_ht">HT</label>
-                <input type="text" name="ht" id="edt_ht" placeholder="entrer le HT" size="10" maxlength="10">
-                <label for="edt_ht">TTC</label>
-                <input type="text" name="ttc" id="edt_ttc" placeholder="entrer le TTC" size="10" maxlength="10">
-            </div>
-            <div class="div_bouton">
-                <input  id="btn_calculer" type="button">
-            </div>
-        </div>
-    </body>
-    <script type="module" src="../src/controleur/tp1.js">
-
-    </script>
-</html>
-
+        </body>
+        <script type="module" src="../controleur/tp1.js">
+        </script>
+    </html>
