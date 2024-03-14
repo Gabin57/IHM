@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <title> Du repos à l’astreinte </title>
+            <link type="text/css" rel="stylesheet" href= "./css/tp3.css">
+        </head>
+        <body>
+            <div id='div_tp3'>
+                <header>
+                    Du repos à l’astreinte
+                </header>
+                <div id="div_listes" class="div_listes">
+                    <div>
+                        <div class='div_titre'>
+                            Personnel en repos
+                            <input id="btn_ajouter" type="button">
+                            <input id="btn_supprimer" type="button">
+                        </div>
+                        <select id="select_repos" class="liste" size="10"></select>
+                    </div>
+                    <div class='div_boutons'>
+                        <input id="btn_vers_astreinte" type="button">
+                        <br><br>
+                        <input id="btn_vers_repos" type="button">
+                    </div>
+                    <div>
+                        <div class='div_titre'>
+                            Personnel d'astreinte
+                        </div>
+                        <select id="select_astreinte" class="liste" size="10">
+                        </select>
+                    </div>
+                </div>
+                <div id="div_saisie" class="div_saisie">
+                    <label for="edt_saisie">Personne à ajouter :</label>
+                    <input type='text' id="edt_saisie" name="edt_saisie" placeholder="nom suivi du prénom" size='40'>
+                </div>
+            </div>
+        </body>
+        <script type="module" src="../controleur/tp3.js"></script>
+    </html>

@@ -1,0 +1,70 @@
+#div_tp3 {
+    width : 100%;
+    height : 100%;
+    border : 1px solid #808080;
+    font-size: 1.5rem;
+}
+
+header {
+    background-color : #808080;
+    color : #ffffff;
+}
+
+.liste {
+    width : 100%;
+}
+
+.div_titre {
+    line-height : 3rem;
+}
+
+.div_listes {
+    display : grid;
+    grid-template-columns : 4fr 6rem 4fr;
+}
+
+.div_boutons {
+    text-align : center;
+    margin-top : 4rem;
+}
+
+select {
+    font-size : 1.5rem;
+}
+
+input[type=button] {
+    cursor : pointer;
+    border : none;
+    vertical-align : middle;
+    width : 3rem;
+    height : 3rem;
+}
+
+#btn_vers_astreinte {
+    background:url(vers_astreinte.jpg) no-repeat center center;
+}
+
+#btn_vers_repos {
+    background:url(vers_repos.jpg) no-repeat center center; 
+}
+
+#btn_ajouter {
+    background:url(ajouter.jpg) no-repeat center center; 
+}
+
+#btn_supprimer {
+    background:url(supprimer.jpg) no-repeat center center; 
+}
+
+input {
+    border : 1px solid #d0d0d0;
+    color : #000000;
+    font : inherit;
+    font-size : 1.5rem;
+    text-align : left;
+    height : 2rem;
+}
+
+input:hover {
+    border : 2px solid #0000ff;
+}
