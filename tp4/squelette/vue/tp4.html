@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title> Fiche de renseignements </title>
+    <link type="text/css" rel="stylesheet" href="./css/tp4.css">
+</head>
+
+<body>
+    <div id='div_tp4'>
+        <header>Fiche de renseignements</header>
+        <div id="div_formulaire">
+            <div class="labeltitre">IDENTIFICATION</div>
+            <div class="div_identification">
+                <span>
+                    <input type="radio" id="radio_madame" name="civilite" value="Mme">
+                    <label for="madame">Madame</label>
+                    <br>
+                    <input type="radio" id="radio_monsieur" name="civilite" value="M.">
+                    <label for="monsieur">Monsieur</label>
+                </span>
+                <span>
+                    <div class="div_identite">
+                        <label for="edt_nom">Nom</label>
+                        <span>
+                            <input type="text" id="edt_nom" placeholder="nom" size="25">
+                        </span>
+                        <label for="edt_prenom">Prénom</label>
+                        <span>
+                            <input type="text" id="edt_prenom" placeholder="prénom" size="25">
+                        </span>
+                    </div>
+                    <br>
+                    <div class="div_identite">
+                        <label for="edt_dtnais">Né le</label>
+                        <span>
+                            <input type="date" id="edt_dtnais" size="10">
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div class="labeltitre">COMPETENCES</div>
+            <div class="div_competence">
+                <span>
+                    <div class="div_complement">
+                        <label for="select_diplome">Diplôme obtenu le plus élévé</label>
+                        <span>
+                            <select id="select_diplome">
+                                <option value=""></option>
+                                <option value="Aucun">Aucun</option>
+                                <option value="Bac">Bac</option>
+                                <option value="BTS, DUT"">BTS, DUT</option>
+                                    <option value=" BUT, LP, Licence">BUT, LP, Licence</option>
+                                <option value="Master">Master</option>
+                                <option value="Doctorat">Doctorat</option>
+                            </select>
+                        </span>
+                    </div>
+                    <br>
+                    <div class="div_complement">
+                        <label for="edt_experience">
+                            Expérience professionnelle<br><i>(en années)</i>
+                        </label>
+                        <span>
+                            <input type="number" id="edt_experience" size="3">
+                        </span>
+                    </div>
+                </span>
+                <span>
+                    <label>Systèmes d'exploitation</label>
+                    <br>
+                    <input type="checkbox" id="chk_linux" name="systeme" value="linux">
+                    <label for="linux">Linux</label>
+                    <br>
+                    <input type="checkbox" id="chk_windows" name="systeme" value="windows">
+                    <label for="windows">Windows</label>
+                    <br>
+                    <input type="checkbox" id="chk_autre" name="systeme" value="autre">
+                    <label for="autre">Autre</label>
+                    <input type="text" id="edt_autre" placeholder="à préciser" size="20" </span>
+            </div>
+            <div class="labeltitre">COMMENTAIRE</div>
+            <div class="div_commentaire">
+                <textarea id="edt_commentaire" rows="3"></textarea>
+            </div>
+            <div id="div_formulaire_boutons" class="boutons">
+                <input id="btn_valider" type="button" value="Valider">
+            </div>
+        </div>
+        <div id="div_recap">
+            <div class="labeltitre">RECAPITULATIF</div>
+            <div class="div_commentaire">
+                <select id="select_recap" size="5"> </select>
+            </div>
+            <div id="div_recap_boutons" class="boutons">
+                <input id="btn_corriger" type="button" value="Corriger">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../controleur/tp4.js">
+</script>
+
+</html>
