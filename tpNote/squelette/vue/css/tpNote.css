@@ -1,0 +1,67 @@
+#div_tp {
+    width : 100%;
+    height : auto;
+    border : 1px solid #808080;
+    font-size : 1.1rem;
+    background-color : #eee;
+    font-family: sans-serif;
+}
+
+header {
+    background-color : #ffffff;
+    color : #808080;
+    margin-bottom : 1rem;
+    text-align : center;
+    border: 1px solid #808080;
+}
+
+.labeltitre {
+    background-color : #ccc;
+    border: 1px solid #808080;
+    font-weight : bold;
+    padding : 0.2em;
+    width : auto;
+    margin-top : 1rem;
+    margin-bottom : 0.5rem;
+}
+
+#div_liste, #div_nouveau {
+    margin: 1rem;
+}
+
+.liste {
+    width: 95%;
+    margin: 1rem;
+}
+
+.div_form_boutons {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+.div_form_boutons input[type=button] {
+    background-color: #ddf;
+    border: 4px solid #aaf;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+#btn_retirer, #btn_annuler {
+    background-color: #fdd;
+    border: 4px solid #faa;
+}
+
+#div_form_ajout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.div_champ {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+.div_champ_etudes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

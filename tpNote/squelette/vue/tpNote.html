@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+        <title>Gestion du personnel</title>
+        <link type='text/css' rel='stylesheet' href='./css/tpNote.css'>
+    </head>
+    <body>
+        <div id='div_tp'>
+            <header>Gestion du personnel</header>
+            <div id='div_liste'>
+                <p>
+                Nombre de personnes disponibles: <span id='nb_personnes'>0</span>
+                </p>
+                <select id='select_personnel' class='liste' size='10'></select>
+                <div class='div_form_boutons'>
+                    <input id='btn_ajouter' type='button' value='Ajouter' />
+                    <input class='btn_rouge' id='btn_retirer' type='button' value='Retirer' />
+                </div>
+            </div>
+            <div class='labeltitre' id='titre'>Nouveau personnel</div>
+            <div  id='div_formulaire'>
+                <div id='div_form_ajout'>
+                    <div>
+                        <input type='radio' id='radio_madame' name='radio_genre'
+                            value='Madame' checked>
+                        <label for='radio_madame'>Madame</label><br>
+                        <input type='radio' id='radio_monsieur' name='radio_genre'
+                            value='Monsieur' checked>
+                        <label for='radio_monsieur'>Monsieur</label>
+                    </div>
+                    <div>
+                        <div class='div_champ'>
+                            <label for='edt_nom'>Nom</label>
+                            <input type='text' id='edt_nom' name='texte_nom'><br>
+                        </div><br>
+                        <div class='div_champ'>
+                            <label for='edt_prenom'>Prenom</label>
+                            <input type='text' id='edt_prenom' name='texte_prenom'>
+                        </div><br>
+                        <div class='div_champ_etudes'>
+                            <div>
+                                <label for='edt_etude'>Niveau d'etudes - bac +</label>
+                                <input type='number' size='3' id='edt_etude' name='edt_etude'>
+                            </div>
+                            <div>
+                                <input type='checkbox' id='chk_expert'>
+                                <label for='chk_expert'>Expert en informatique</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='div_form_boutons'>
+                    <input id='btn_valider' type='button' value='Valider' />
+                    <input class='btn_rouge'
+                        id='btn_annuler' type='button' value='Annuler' />
+                </div>
+            </div>
+        </div>
+        <script type='module' src='../controleur/tpNote.js'></script>
+    </body>
+</html>
