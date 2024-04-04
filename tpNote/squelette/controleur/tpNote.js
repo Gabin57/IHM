@@ -1,4 +1,4 @@
-import { vueTpNote } from "./class_tpNote.js";
+import { vueTpNote } from "../controleur/class_tpNote";
 vueTpNote.init({ edtNom: document.querySelector('[id=edt_nom]'),
     edtPrenom: document.querySelector('[id=edt_prenom]'),
     niveauEtude: document.querySelector('[id=edt_etude]'),
@@ -12,7 +12,8 @@ vueTpNote.init({ edtNom: document.querySelector('[id=edt_nom]'),
     divFormulaire: document.querySelector('[id=div_formulaire]'),
     listePersonnel: document.querySelector("[id=select_personnel]"),
     titre: document.querySelector('[id=titre]'),
-    nombrePersonnel: document.querySelector('[id=nb_personnes]')
+    nombrePersonnel: document.querySelector('[id=nb_personnes]'),
+    divListe: document.querySelector("[id=div_tp]")
 });
 /* ,divRecap :document.querySelector('[id=div_recap]')
 ,divFormBoutons:document.querySelector('[id=div_formulaire_boutons]')
