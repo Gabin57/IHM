@@ -1,4 +1,4 @@
-import {vueTpNote} from "./class_tpNote.js"
+import {vueTpNote} from "../controleur/class_tpNote"
 
 vueTpNote.init (
     { edtNom :document.querySelector('[id=edt_nom]')
@@ -15,7 +15,7 @@ vueTpNote.init (
     ,listePersonnel : document.querySelector("[id=select_personnel]")
     ,titre:document.querySelector('[id=titre]')
     ,nombrePersonnel:document.querySelector('[id=nb_personnes]')
-
+    ,divListe : document.querySelector("[id=div_tp]")
 } );
 
 

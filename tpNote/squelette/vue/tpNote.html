@@ -10,7 +10,7 @@
             <header>Gestion du personnel</header>
             <div id='div_liste'>
                 <p>
-                Nombre de personnes disponibles: <span id='nb_personnes'>0</span>
+                Nombre de personnes disponibles : <output id='nb_personnes' type="number"></output>
                 </p>
                 <select id='select_personnel' class='liste' size='10'></select>
                 <div class='div_form_boutons'>
@@ -41,7 +41,7 @@
                         <div class='div_champ_etudes'>
                             <div>
                                 <label for='edt_etude'>Niveau d'etudes - bac +</label>
-                                <input type='number' size='3' id='edt_etude' name='edt_etude'>
+                                <input type='number' size='3' id='edt_etude' name='edt_etude' min="0">
                             </div>
                             <div>
                                 <input type='checkbox' id='chk_expert'>

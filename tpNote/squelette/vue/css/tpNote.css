@@ -39,6 +39,11 @@ header {
     margin-right: 3rem;
 }
 
+#btn_valider:disabled{
+    background-color: rgb(219, 219, 219);
+    border: 4px solid rgb(177, 177, 177);
+}
+
 .div_form_boutons input[type=button] {
     background-color: #ddf;
     border: 4px solid #aaf;
