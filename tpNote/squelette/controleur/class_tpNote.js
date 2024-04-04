@@ -4,10 +4,6 @@ class VueTpNote {
     }
     init(form) {
         this._form = form;
-        //.hidden = true;
-        //.onclick }
-        //.onchange
-        //= function ():void { vueTpNote.fonction(); }
         this.form.divFormulaire.hidden = true;
         this.form.titre.hidden = true;
         this.form.radioMadame.defaultChecked = false;
@@ -26,7 +22,7 @@ class VueTpNote {
             this.form.nombrePersonnel.value = (1 + this.form.listePersonnel.length).toString();
         });
         this.form.btnRetirer.addEventListener("mousedown", () => {
-            this.form.nombrePersonnel.value = (1 + this.form.listePersonnel.length).toString();
+            this.form.nombrePersonnel.value = (this.form.listePersonnel.length).toString();
         });
         this.form.radioMadame.onclick = function () { vueTpNote.changeCivilite(); };
         this.form.radioMonsieur.onclick = function () { vueTpNote.changeCivilite(); };
@@ -37,7 +33,6 @@ class VueTpNote {
     }
     get form() { return this._form; }
     changeCivilite() {
-        // Madame ==> "Experte", Monsieur ==> "Expert"
         let chaine;
         if (this.form.radioMadame.checked) {
             this._civilite = "Madame";
@@ -55,9 +50,14 @@ class VueTpNote {
         this.form.divFormulaire.hidden = false;
         this.form.titre.hidden = false;
         this.form.chkExpert.disabled = true;
+        this.activerPartieListe(false);
+    }
+    activerPartieListe(active) {
+        this.form.listePersonnel.disabled = !active;
+        this.form.btnAjouter.disabled = !active;
+        this.form.btnRetirer.disabled = !active;
     }
     ajouterPersonnel() {
-        this.form.divListe.disabled = true;
         const prenom = this.form.edtPrenom;
         const nom = this.form.edtNom;
         const etude = Number(this.form.niveauEtude.value);
@@ -79,7 +79,7 @@ class VueTpNote {
             this.form.titre.hidden = true;
             this.form.chkExpert.disabled = true;
             entry = ``;
-            this.form.divListe.disabled = false;
+            this.activerPartieListe(true);
         }
     }
     chaineEstVide(chaine) {
@@ -97,34 +97,42 @@ class VueTpNote {
         return true;
     }
     testDesErreurs() {
-        let erreur = "\n\n";
+        let erreur = "<br><br>";
+        let yaUneErreur = false;
         if (!this.form.radioMadame.checked && !this.form.radioMonsieur.checked) {
-            erreur += "Civilité à renseigner\n";
+            erreur += "Civilité à renseigner<br>";
+            yaUneErreur = true;
         }
         if (this.chaineEstVide(this.form.edtNom.value)) {
-            erreur += "Nom à renseigner\n";
+            erreur += "Nom à renseigner<br>";
+            yaUneErreur = true;
         }
         if (this.chaineEstVide(this.form.edtPrenom.value)) {
-            erreur += "Prénom à renseigner\n";
+            erreur += "Prénom à renseigner<br>";
+            yaUneErreur = true;
         }
-        if (this.form.niveauEtude === null || !Number.isNaN(Number(this.form.niveauEtude))) {
-            erreur += "Niveau d'étude à renseigner avec des chiffres\n";
+        if (this.form.niveauEtude === null ||
+            !Number.isNaN(Number(this.form.niveauEtude))) {
+            erreur += "Niveau d'étude à renseigner avec des chiffres<br>";
+            yaUneErreur = true;
         }
-        if (erreur.length === 2) {
+        if (!yaUneErreur) {
+            this.form.txtErreur.innerHTML = "";
             return true;
         }
         // affichage message d'erreur
         else {
             this.form.nombrePersonnel.value = String(Number(this.form.nombrePersonnel.value) - 1);
-            alert('Erreur dans le formulaire ' + erreur);
+            this.form.txtErreur.innerHTML = "Erreur dans le formulaire" + erreur;
             return false;
         }
     }
     supprimerLigne() {
         const noLigne = this.form.listePersonnel.selectedIndex;
-        //const message:string = "Êtes vous sûr de vouloir retirer cette ligne ?";
-        if (noLigne > -1) {
+        const message = "Êtes vous sûr de vouloir retirer cette ligne ?";
+        if (noLigne > -1 && confirm(message)) {
             this.form.listePersonnel.remove(noLigne);
+            this.form.nombrePersonnel.value = String(Number(this.form.nombrePersonnel.value) - 1);
         }
     }
     viderChamps() {
@@ -140,6 +148,8 @@ class VueTpNote {
         this.form.divFormulaire.hidden = true;
         this.form.titre.hidden = true;
         this.form.chkExpert.checked = false;
+        this.form.txtErreur.innerHTML = "";
+        this.activerPartieListe(true);
     }
 }
 let vueTpNote = new VueTpNote;

@@ -1,4 +1,4 @@
-import {vueTpNote} from "../controleur/class_tpNote"
+import {vueTpNote} from "../controleur/class_tpNote.js"
 
 vueTpNote.init (
     { edtNom :document.querySelector('[id=edt_nom]')
@@ -15,19 +15,5 @@ vueTpNote.init (
     ,listePersonnel : document.querySelector("[id=select_personnel]")
     ,titre:document.querySelector('[id=titre]')
     ,nombrePersonnel:document.querySelector('[id=nb_personnes]')
-    ,divListe : document.querySelector("[id=div_tp]")
+    ,txtErreur : document.querySelector("[id=txt_erreur]")
 } );
-
-
-    /* ,divRecap :document.querySelector('[id=div_recap]')
-    ,divFormBoutons:document.querySelector('[id=div_formulaire_boutons]')
-    ,edtDtNais :document.querySelector('[id=edt_dtnais]')
-    ,listeDiplome :document.querySelector('[id=select_diplome]')
-    ,edtExperience :document.querySelector('[id=edt_experience]')
-    ,chkWindows :document.querySelector('[id=chk_windows]')
-    ,chkLinux :document.querySelector('[id=chk_linux]')
-    ,chkAutre :document.querySelector('[id=chk_autre]')
-    ,edtAutre :document.querySelector('[id=edt_autre]')
-    ,edtCommentaire:document.querySelector('[id=edt_commentaire]')
-    ,listeRecap :document.querySelector('[id=select_recap]')
-    ,btnCorriger :document.querySelector('[id=btn_corriger]') */
