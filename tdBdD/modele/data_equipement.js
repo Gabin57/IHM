@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UnTypEquipt {
     constructor(id_equipt = "", lib_equipt = "", commentaire = "") {
         this._idEquipt = id_equipt;

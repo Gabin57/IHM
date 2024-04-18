@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UnDept { // définition de la classe gérant les données d’un département
   private _codeDept: string;
   private _nomDept: string;

@@ -1,5 +1,5 @@
-import { LesSalles, UneSalle } from "../modele/data_salle.js";
-import { LesDepts } from "../modele/data_departement.js";
+import { LesSalles, UneSalle } from "../modele/data_salle";
+import { LesDepts } from "../modele/data_departement";
 import { LesTypEquipts, LesTypEquiptsBySalle, UnTypEquiptBySalle, } from "../modele/data_equipement.js";
 class VueSalleEdit {
     get form() {

@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UnDept {
     constructor(code_dept = "", nom_dept = "", resp_dept = "") {
         // initialisation à l’instanciation

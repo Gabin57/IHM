@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UneSalle {
     constructor(num_salle = "", lib_salle = "", etage = "", code_dept = "") {
         this._numSalle = num_salle;

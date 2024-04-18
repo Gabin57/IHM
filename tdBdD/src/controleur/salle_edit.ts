@@ -1,4 +1,4 @@
-import { vueSalleEdit } from "../controleur/class_salle_edit.js";
+import { vueSalleEdit } from "../controleur/class_salle_edit";
 vueSalleEdit.init({
   divDetail: document.querySelector("[id=div_salle_detail]"),
   edtNum: document.querySelector("[id=edt_salle_num]"),

@@ -1,5 +1,5 @@
-import { LesSalles, UneSalle } from "../modele/data_salle.js";
-import { LesDepts, UnDept } from "../modele/data_departement.js";
+import { LesSalles, UneSalle } from "../modele/data_salle";
+import { LesDepts, UnDept } from "../modele/data_departement";
 import {
   LesTypEquipts,
   LesTypEquiptsBySalle,

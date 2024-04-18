@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UneSalle {
   private _numSalle: string;
   private _libSalle: string;

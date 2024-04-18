@@ -1,4 +1,4 @@
-import { APIsql, connexion } from "../modele/connexion.js";
+import { APIsql, connexion } from "../modele/connexion";
 class UnTypEquipt {
   private _idEquipt: string;
   private _libEquipt: string;
